@@ -5,43 +5,43 @@ st.set_page_config(page_title="Page web de Kaviyarasu", page_icon=":material/sta
 # Original text translated into formal French
 
 Digital_resume = st.Page(
-    page="views/Digital_Resume.py",
+    page="pages/Digital_Resume.py",
     title="CV numérique",
     icon=":material/digital_wellbeing:",
 )
 about_page = st.Page(
-    page="views/Home.py",
+    page="pages/Home.py",
     title="Accueil",
     icon=":material/home:",
     default=True,
 )
 project_1_page = st.Page(
-    page="views/About_me.py",
+    page="pages/About_me.py",
     title="À propos de moi",
     icon=":material/account_circle:",
 )
 project_2_page = st.Page(
-    page="Views/Experience.py",
+    page="pages/Experience.py",
     title="Expérience",
     icon=":material/rocket_launch:",
 )
 project_3_page = st.Page(
-    page="views/Projects.py",
+    page="pages/Projects.py",
     title="Projets",
     icon=":material/smart_toy:",
 )
 project_4_page = st.Page(
-    page="Views/Skills.py",
+    page="pages/Skills.py",
     title="Compétences",
     icon=":material/tactic:",
 )
 project_5_page = st.Page(
-    page="Views/Core_Competencies.py",
+    page="pages/Core_Competencies.py",
     title="Compétences fondamentales",
     icon=":material/psychology:",
 )
 project_6_page = st.Page(
-    page="Views/Contact_me.py",
+    page="pages/Contact_me.py",
     title="Contactez-moi",
     icon=":material/contact_mail:",
 )
@@ -56,6 +56,7 @@ st.sidebar.text("Réalisé par Kaviyarasu")
 #st.logo("Assets/Kaviyarasu.png")
 
 pg.run()
+
 
 
 
