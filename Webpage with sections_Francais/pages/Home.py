@@ -1,6 +1,6 @@
 import streamlit as st
 import requests
-#from streamlit_lottie import st_lottie
+from streamlit_lottie import st_lottie
 
 
 
@@ -44,8 +44,13 @@ with st.container():
         if st.button("📧 Prenez contact avec moi"):
             st.switch_page("Views/Contact_me.py")
 
-st.subheader("Qui suis-je ?", anchor=False)
-st.write(
+
+with st.container():
+    left_column, right_column = st.columns(2)
+    with left_column:
+        st.write("\n")
+        st.subheader("Qui suis-je ?", anchor=False)
+        st.write(
             """
             - Ingénieur industriel visant à optimiser l’efficacité de la production.
             - Débutant dans la création de diagrammes de modèles industriels.
@@ -53,6 +58,8 @@ st.write(
             - Développeur Python émergent.
             """
         )
- 
-st.subheader("Un ingénieur industriel de France", anchor=False)
-st.write("J’aide les entreprises à optimiser leurs processus de production en utilisant des modèles et diagrammes d’entreprise, tout en privilégiant la durabilité. En combinant des analyses basées sur les données avec l’automatisation, je rends les flux de travail plus efficaces tout en garantissant leur durabilité à long terme. J’utilise également Python pour développer des solutions qui simplifient les tâches et favorisent une prise de décision éclairée.", anchor=False)
+        with st.container():
+            st.subheader("Un ingénieur industriel de France", anchor=False)
+            st.write("J’aide les entreprises à optimiser leurs processus de production en utilisant des modèles et diagrammes d’entreprise, tout en privilégiant la durabilité. En combinant des analyses basées sur les données avec l’automatisation, je rends les flux de travail plus efficaces tout en garantissant leur durabilité à long terme. J’utilise également Python pour développer des solutions qui simplifient les tâches et favorisent une prise de décision éclairée.", anchor=False)
+    with right_column:
+        st_lottie(lottie_coding, height=470, key="Industrial coding")
