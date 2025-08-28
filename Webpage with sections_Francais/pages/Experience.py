@@ -1,6 +1,5 @@
 import streamlit as st
 import requests
-from streamlit_lottie import st_lottie
 
 st.markdown(
     """
@@ -115,4 +114,5 @@ st.write(
     - Participé à des discussions sur l’automatisation, la durabilité et la gestion de la production, contribuant à une approche holistique de l’efficacité industrielle.
     """
 )
+
 
