@@ -1,6 +1,12 @@
 import streamlit as st
 import requests
 from streamlit_lottie import st_lottie
+# Insert at the very top of Home.py
+import subprocess
+import sys
+
+subprocess.run([sys.executable, "-m", "pip", "install", "streamlit-lottie"], check=True)
+
 
 def load_lottieurl(url):
     r = requests.get(url)
@@ -59,4 +65,5 @@ with st.container():
             st.subheader("Un ingénieur industriel de France", anchor=False)
             st.write("J’aide les entreprises à optimiser leurs processus de production en utilisant des modèles et diagrammes d’entreprise, tout en privilégiant la durabilité. En combinant des analyses basées sur les données avec l’automatisation, je rends les flux de travail plus efficaces tout en garantissant leur durabilité à long terme. J’utilise également Python pour développer des solutions qui simplifient les tâches et favorisent une prise de décision éclairée.", anchor=False)
     with right_column:
+
         st_lottie(lottie_coding, height=470, key="Industrial coding")
