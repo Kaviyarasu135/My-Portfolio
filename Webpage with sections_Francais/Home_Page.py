@@ -4,7 +4,7 @@ st.set_page_config(page_title="Page web de Kaviyarasu", page_icon=":material/sta
 
 # Original text translated into formal French
 Digital_resume = st.Page(
-    page="pages/Digital_Resume.py",
+    page="pages/Digital_resume.py",
     title="CV numérique",
     icon=":material/digital_wellbeing:",
 )
@@ -51,3 +51,4 @@ pg = st.navigation(
 
 st.sidebar.text("Réalisé par Kaviyarasu")
 pg.run()
+
