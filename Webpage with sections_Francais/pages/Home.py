@@ -1,11 +1,7 @@
 import streamlit as st
 import requests
 from streamlit_lottie import st_lottie
-# Insert at the very top of Home.py
-import subprocess
-import sys
 
-subprocess.run([sys.executable, "-m", "pip", "install", "streamlit-lottie"], check=True)
 
 
 def load_lottieurl(url):
@@ -67,3 +63,4 @@ with st.container():
     with right_column:
 
         st_lottie(lottie_coding, height=470, key="Industrial coding")
+
