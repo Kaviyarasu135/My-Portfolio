@@ -35,7 +35,7 @@ col1, col2 = st.columns(2, gap="small")
 with col2:
     st.image(profile_pic, width=215)
     if st.button(" Prenez contact avec moi"):#📧
-            st.switch_page("Views/Contact_me.py")
+            st.switch_page("pages/Contact_me.py")
 
 
 # Original text translated into formal French
@@ -148,4 +148,5 @@ st.write(
     """
 > "La véritable croissance ne vient pas seulement de s’améliorer soi-même, mais aussi d’élever les autres au fur et à mesure de son progrès."
     """
+
 )
