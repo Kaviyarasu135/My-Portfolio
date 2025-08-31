@@ -27,10 +27,12 @@ BASE_DIR = Path(__file__).parent
 
 profile_pic = BASE_DIR / "Assets" / "RCL93391.JPG"
 
+profile_pic = Image.open(profile_pic)
+
 with st.container():
     left_column, right_column = st.columns(2)
     with left_column:
-        st.image("./Assets/RCL93391.jpg", width=250)
+        st.image(profile_pic, width=215)
     with right_column:
         st.title("Kaviyarasu", anchor=False)
         st.write("Ingénieur industriel")
@@ -53,6 +55,7 @@ st.write(
         )
 st.subheader("Un ingénieur industriel de France", anchor=False)
 st.write("J’aide les entreprises à optimiser leurs processus de production en utilisant des modèles et diagrammes d’entreprise, tout en privilégiant la durabilité. En combinant des analyses basées sur les données avec l’automatisation, je rends les flux de travail plus efficaces tout en garantissant leur durabilité à long terme. J’utilise également Python pour développer des solutions qui simplifient les tâches et favorisent une prise de décision éclairée.", anchor=False)
+
 
 
 
