@@ -5,7 +5,7 @@ def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-local_css("style/Style.css")
+local_css("Style/Style.css")
 
 # Original text translated into formal French
 st.header("Prenez contact avec moi", anchor=False)
@@ -21,6 +21,7 @@ contact_form = """
 """
 
 st.write(contact_form, unsafe_allow_html=True)
+
 
 
 
