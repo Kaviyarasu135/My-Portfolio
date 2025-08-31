@@ -81,4 +81,4 @@ df = pd.DataFrame({
 # Display the bar chart using Streamlit's built-in function
 st.bar_chart(df.set_index('Activités'))
 
-st.write("Ce graphique visualise la répartition du temps alloué à chaque activité quotidienne.")
+
