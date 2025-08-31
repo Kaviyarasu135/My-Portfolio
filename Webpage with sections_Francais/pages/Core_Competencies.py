@@ -1,5 +1,4 @@
 import streamlit as st
-import matplotlib.pyplot as plt
 import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
@@ -115,3 +114,4 @@ fig_bar.update_layout(
 
 
 st.plotly_chart(fig_bar, use_container_width=True, config={"displayModeBar": False}, key="bar_chart")
+
