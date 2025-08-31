@@ -1,18 +1,8 @@
 import streamlit as st
-from streamlit_lottie import st_lottie
 import matplotlib.pyplot as plt
 import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
-import requests
-
-def load_lottieur1(url):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
-
-lottie_coding_1_2 = load_lottieur1("https://lottie.host/4c657fd1-c92f-4b5a-bd0e-4df7f6b5121d/rUuyDR2k92.json")
 
 st.markdown(
     """
@@ -122,5 +112,6 @@ fig_bar.update_layout(
     font=dict(size=14),
     hovermode=False
 )
+
 
 st.plotly_chart(fig_bar, use_container_width=True, config={"displayModeBar": False}, key="bar_chart")
