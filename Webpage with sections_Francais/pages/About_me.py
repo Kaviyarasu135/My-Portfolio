@@ -1,27 +1,4 @@
-from PIL import Image
-import requests
 import streamlit as st
-from streamlit_lottie import st_lottie
-
-def load_lottieurl(url):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
-def load_lottieur2(url):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
-def load_lottieur3(url):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
-
-lottie_coding = load_lottieurl("https://lottie.host/eca8ed12-aeeb-4985-8f5f-a771d4e8c66e/OxQl13pWPU.json")
-lottie_Master = load_lottieur2("https://lottie.host/b432d721-58a8-47b1-9cd7-88f9ee336801/GqqplW3NG5.json")
-lottie_Bachelor = load_lottieur3("https://lottie.host/26c18ef8-8936-4611-abcd-99d1722004e1/pRUZDGYZHe.json")
 
 # Original text translated into formal French
 st.header("Mes activités", anchor=False)
@@ -56,4 +33,5 @@ st.write(
             - Approche analytique rigoureuse pour diagnostiquer et améliorer l’efficacité des systèmes.
             - Orientation vers la connexion entre la technologie et les applications électriques du monde réel.
             """
+
         )
