@@ -1,14 +1,5 @@
 import streamlit as st
-import requests
-from streamlit_lottie import st_lottie
 
-def load_lottieur2(url):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
-    
-lottie_contact = load_lottieur2("https://lottie.host/0b9baeae-3718-4b3f-b4eb-1061f7ead868/2emklHnw0a.json")
 
 def local_css(file_name):
     with open(file_name) as f:
@@ -33,3 +24,4 @@ with st.container():
     left_column, right_column = st.columns(2)
     with left_column:
         st.markdown(contact_form, unsafe_allow_html=True)
+
