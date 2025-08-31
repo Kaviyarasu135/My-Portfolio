@@ -19,9 +19,9 @@ st.markdown(
 
 #st.info("For a better experience, please view this application on a computer.")
 
-resume_file_anglais = Path("./Assets/Anglais.pdf")
-resume_file_francais = Path("./Assets/Francais.pdf")
-profile_pic = Path("./Assets/RCL93391.jpg")
+resume_file_anglais = Path("Assets/Anglais.pdf")
+resume_file_francais = Path("Assets/Francais.pdf")
+profile_pic = Path("Assets/RCL93391.jpg")
 
 with open(resume_file_anglais, "rb") as pdf_file_anglais:
     PDFbyte_anglais = pdf_file_anglais.read()
@@ -150,3 +150,4 @@ st.write(
     """
 
 )
+
