@@ -75,10 +75,11 @@ time_spent = [2.4, 2.4, 2.4, 3.8, 1.68, 3.12, 2.4, 2.4, 2.4]
 # Create a DataFrame for Streamlit's bar chart
 df = pd.DataFrame({
     'Activités': activities,
-    'Temps consacré (heures)': time_spent
+    'Temps consacré ': time_spent
 })
 
 # Display the bar chart using Streamlit's built-in function
 st.bar_chart(df.set_index('Activités'))
+
 
 
