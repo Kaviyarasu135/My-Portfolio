@@ -3,6 +3,12 @@ import streamlit as st
 import plotly.graph_objects as go
 import pandas as pd
 
+try:
+    import plotly.graph_objects as go
+    st.write("Plotly is installed and loaded successfully!")
+except ModuleNotFoundError:
+    st.error("Plotly is NOT installed properly.")
+
 st.markdown(
     """
     <style>
@@ -114,6 +120,7 @@ fig_bar.update_layout(
 
 
 st.plotly_chart(fig_bar, use_container_width=True, config={"displayModeBar": False}, key="bar_chart")
+
 
 
 
