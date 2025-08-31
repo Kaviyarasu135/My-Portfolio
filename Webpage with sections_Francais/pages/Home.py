@@ -1,14 +1,4 @@
 import streamlit as st
-import requests
-from streamlit_lottie import st_lottie
-
-def load_lottieurl(url):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
-
-lottie_coding = load_lottieurl("https://lottie.host/577440fb-123c-4245-9bf6-947b5f020a59/btPr877Yuv.json")
 
 
 # Original text translated into formal French
@@ -53,3 +43,4 @@ st.write(
         )
 st.subheader("Un ingénieur industriel de France", anchor=False)
 st.write("J’aide les entreprises à optimiser leurs processus de production en utilisant des modèles et diagrammes d’entreprise, tout en privilégiant la durabilité. En combinant des analyses basées sur les données avec l’automatisation, je rends les flux de travail plus efficaces tout en garantissant leur durabilité à long terme. J’utilise également Python pour développer des solutions qui simplifient les tâches et favorisent une prise de décision éclairée.", anchor=False)
+
