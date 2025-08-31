@@ -1,44 +1,4 @@
 import streamlit as st
-import requests
-from streamlit_lottie import st_lottie
-
-def load_lottieur1(url):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
-def load_lottieur2(url):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
-def load_lottieur3(url):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
-def load_lottieur4(url):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
-def load_lottieur5(url):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
-def load_lottieur6(url):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
-
-lottie_coding_1_2 = load_lottieur1("https://lottie.host/287599d5-c2e8-4783-9d61-9926f0722d9b/SUfRVr1swG.json")
-lottie_coding_3_4 = load_lottieur2("https://lottie.host/61ec1171-395f-4954-9297-b6c33e0a3d85/0AekzDD9CB.json")
-lottie_coding_5_6 = load_lottieur3("https://lottie.host/a307861e-e8d1-482a-b1c6-9c3a7f6536c0/tEeOF8ngMa.json")
-lottie_coding_7_8 = load_lottieur4("https://lottie.host/ec143494-3359-4239-9e02-d44c3ff5833d/BM9grZHnfm.json")
-lottie_coding_9_10 = load_lottieur5("https://lottie.host/ca30c8ad-a569-42bb-9fd8-59e9e4b227c0/uTNhv3jh9m.json")
-lottie_coding_11_12 = load_lottieur6("https://lottie.host/37954394-c814-4019-9fc4-f146d378f240/Dji5WmWaab.json")
 
 st.markdown(
     """
@@ -158,4 +118,5 @@ st.write(
             - Planifie et exécute les tâches de manière méthodique, équilibrant efficacité et adaptabilité dans la résolution de problèmes.
             - Valorise une communication claire, des délais réalistes et une collaboration efficace, garantissant que les projets se déroulent sans heurts et atteignent leurs objectifs.
             """
+
         )
