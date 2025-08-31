@@ -1,5 +1,5 @@
 import streamlit as st
-import os
+from pathlib import path
 
 # Original text translated into formal French
 
@@ -22,16 +22,16 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# Get the absolute path to the directory containing this script
-script_dir = os.path.dirname(__file__)
-# Construct the absolute path to the image
-image_path = os.path.join(script_dir, "..", "Assets", "RCL93391.jpg")
+# Get the path to the current script (Home.py)
+script_path = Path(__file__)
+# Construct the path to the image by going up one directory and then into Assets
+image_path = script_path.parent.parent / "Assets" / "RCL93391.jpg"
 
 with st.container():
     left_column, right_column = st.columns(2)
     with left_column:
         #st.write(" ")
-        st.image(image_path, width=250)
+        st.image(str(image_path), width=250)
         #st.image("Webpage with sections_Francais/Assets/RCL93391.jpg", width=250)
     with right_column:
         st.title("Kaviyarasu", anchor=False)
@@ -50,6 +50,7 @@ st.write(
         )
 st.subheader("Un ingénieur industriel de France", anchor=False)
 st.write("J’aide les entreprises à optimiser leurs processus de production en utilisant des modèles et diagrammes d’entreprise, tout en privilégiant la durabilité. En combinant des analyses basées sur les données avec l’automatisation, je rends les flux de travail plus efficaces tout en garantissant leur durabilité à long terme. J’utilise également Python pour développer des solutions qui simplifient les tâches et favorisent une prise de décision éclairée.", anchor=False)
+
 
 
 
