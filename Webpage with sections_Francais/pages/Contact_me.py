@@ -8,9 +8,7 @@ def local_css(file_name):
 local_css("style/Style.css")
 
 # Original text translated into formal French
-
-with st.container():
-    st.header("Prenez contact avec moi", anchor=False)
+st.header("Prenez contact avec moi", anchor=False)
 
     contact_form = """
     <form action="https://formsubmit.co/kaviyarasu.fr@gmail.com" method="POST">
@@ -21,7 +19,6 @@ with st.container():
         <button type="submit">Envoyer</button>
     </form>
     """
-    left_column, right_column = st.columns(2)
-    with left_column:
-        st.markdown(contact_form, unsafe_allow_html=True)
+st.write(contact_form, unsafe_allow_html=True)
+
 
