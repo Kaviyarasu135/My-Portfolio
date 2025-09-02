@@ -1,5 +1,8 @@
 import streamlit as st
 
+- Master en ingénierie industrielle| École Centrale de Nantes (2024 - 2026)
+- Licence en ingénierie électrique et électronique | KPR Institute of Engineering (2020 - 2024)
+
 # Original text translated into formal French
 st.header("Mes activités", anchor=False)
 st.write(
@@ -35,3 +38,4 @@ st.write(
             """
 
         )
+
