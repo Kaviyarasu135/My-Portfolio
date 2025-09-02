@@ -48,7 +48,7 @@ with col1:
     st.title("Kaviyarasu", anchor=False)
     st.write("Ingénieur & Passionné de Développement durable")
     st.write("Kaviyarasu.Sakthivel@eleves.ec-nantes.fr | 0780831482 | Nantes, France")
-    st.write("[LinkedIn](https://linkedin.com/in/kaviyarasu-sakthivel) | Kaviyarasu.com (Bientôt disponible)")
+    st.write("[LinkedIn](https://linkedin.com/in/kaviyarasu-sakthivel) | kaviyarasu.streamlit.app")
     st.write("\n")
     st.download_button(
         label="Télécharger le CV (Anglais)",
@@ -154,6 +154,7 @@ st.write(
     """
 
 )
+
 
 
 
