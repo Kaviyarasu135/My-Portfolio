@@ -150,10 +150,11 @@ st.write(
 st.markdown("<h3><u>Objectif de vie</u></h3>", unsafe_allow_html=True)
 st.write(
     """
-> "La véritable croissance ne vient pas seulement de s’améliorer soi-même, mais aussi d’élever les autres au fur et à mesure de son progrès."
+"La véritable croissance ne vient pas seulement de s’améliorer soi-même, mais aussi d’élever les autres au fur et à mesure de son progrès."
     """
 
 )
+
 
 
 
