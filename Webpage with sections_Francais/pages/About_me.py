@@ -29,8 +29,8 @@ st.write(
             - Développement et entraînement de modèles pour une prise de décision plus intelligente à l’aide de Python.
             """
         )
-st.subheader("Master", anchor=False)
-st.markdown("<h3><u>Master en ingénierie industrielle| École Centrale de Nantes (2024 - 2026) :</u></h3>", unsafe_allow_html=True)
+
+st.markdown("<h3><u>Master en Ingénierie Industrielle| École Centrale de Nantes (2024 - 2026) :</u></h3>", unsafe_allow_html=True)
 st.write(
             """
             Je suis étudiant en Master d’ingénierie industrielle, spécialisé dans les entreprises intelligentes et connectées. Je me concentre sur l’optimisation des opérations commerciales en intégrant des systèmes intelligents, garantissant efficacité, durabilité et innovation. Je travaille avec aisance aussi bien de manière autonome qu’en équipe, dirigeant des équipes et des projets avec une approche orientée vers les résultats.
@@ -42,8 +42,7 @@ st.write(
             """
         )
 
-st.subheader("Licence", anchor=False)
-st.markdown("<h3><u>Licence en ingénierie électrique et électronique | KPR Institute of Engineering (2020 - 2024) :</u></h3>", unsafe_allow_html=True)
+st.markdown("<h3><u>Licence en Ingénierie Électrique et Électronique | KPR Institute of Engineering (2020 - 2024) :</u></h3>", unsafe_allow_html=True)
 st.write(
             """
             Je suis titulaire d’une licence en ingénierie électrique et électronique, avec une solide expertise dans la conception, l’analyse et l’optimisation des systèmes électriques. J’aime relever des défis techniques complexes, que ce soit en travaillant seul ou en équipe. Doté d’un esprit stratégique et d’une expérience en leadership, je veille à ce que les projets soient menés efficacement tout en favorisant l’innovation dans les systèmes électriques et électroniques.
