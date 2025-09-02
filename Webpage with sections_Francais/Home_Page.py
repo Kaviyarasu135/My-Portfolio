@@ -5,7 +5,7 @@ st.set_page_config(page_title="Page web de Kaviyarasu", page_icon=":material/sta
 # Original text translated into formal French
 Digital_resume = st.Page(
     page="pages/Digital_resume.py",
-    title="CV numérique",
+    title="CV Numérique",
     icon=":material/digital_wellbeing:",
 )
 about_page = st.Page(
@@ -16,7 +16,7 @@ about_page = st.Page(
 )
 project_1_page = st.Page(
     page="pages/About_me.py",
-    title="À propos de moi",
+    title="À Propos de Moi",
     icon=":material/account_circle:",
 )
 project_2_page = st.Page(
@@ -36,7 +36,7 @@ project_4_page = st.Page(
 )
 project_5_page = st.Page(
     page="pages/Core_Competencies.py",
-    title="Compétences fondamentales",
+    title="Compétences Personnelles",
     icon=":material/psychology:",
 )
 project_6_page = st.Page(
@@ -52,3 +52,4 @@ pg = st.navigation(
 st.sidebar.text("Réalisé par Kaviyarasu")
 
 pg.run()
+
