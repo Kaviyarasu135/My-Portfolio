@@ -17,8 +17,8 @@ st.markdown(
 
 # Original text translated into formal French
 
-
-st.header("Mes activités", anchor=False)
+st.markdown("<h3><u>Mes Activités :</u></h3>", unsafe_allow_html=True)
+st.header("", anchor=False)
 st.write(
             """
             Je suis un ingénieur industriel spécialisé dans l’optimisation durable des entreprises grâce à l’utilisation de logiciels avancés, y compris Python. Je me concentre sur l’analyse basée sur les données, l’optimisation des processus et la modélisation des flux d’entreprise pour améliorer l’efficacité et faciliter une transition harmonieuse vers la durabilité.
@@ -53,5 +53,6 @@ st.write(
             """
 
         )
+
 
 
