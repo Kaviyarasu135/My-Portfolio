@@ -49,10 +49,10 @@ pg = st.navigation(
     [Digital_resume, about_page, project_1_page, project_2_page, project_3_page, project_4_page, project_5_page, project_6_page]
 )
 
-st.sidebar.text("Réalisé par Kaviyarasu")
-st.sidebar.text("Développé par Kaviyarasu")
+st.sidebar.text("RDéveloppé par Kaviyarasu")
 
 pg.run()
+
 
 
 
