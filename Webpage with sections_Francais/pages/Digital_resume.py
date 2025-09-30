@@ -118,8 +118,8 @@ st.write(
 st.markdown("<h3><u>Langues</u></h3>", unsafe_allow_html=True)
 st.write(
     """
-- **Anglais** (C1 – Août 2025)
-- **Français** (B1 – Août 2025)
+- **Anglais** (C2 – Août 2025)
+- **Français** (B2 – Août 2025)
     """
 )
 #- **Tamoul** (Langue maternelle)
@@ -154,6 +154,7 @@ st.write(
     """
 
 )
+
 
 
 
