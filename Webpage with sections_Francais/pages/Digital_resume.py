@@ -50,14 +50,9 @@ with col1:
     st.write("Kaviyarasu.Sakthivel@eleves.ec-nantes.fr | 0780831482 | Nantes, France")
     st.write("[LinkedIn](https://linkedin.com/in/kaviyarasu-sakthivel) | kaviyarasu.streamlit.app")
     st.write("\n")
+  
     st.download_button(
-        label="Télécharger le CV (Anglais)",
-        data=PDFbyte_anglais,
-        file_name=resume_file_anglais.name,
-        mime="application/octet-stream",
-    )
-    st.download_button(
-        label="Télécharger le CV (Français)",
+        label="Télécharger le CV ",
         data=PDFbyte_francais,
         file_name=resume_file_francais.name,
         mime="application/octet-stream",
