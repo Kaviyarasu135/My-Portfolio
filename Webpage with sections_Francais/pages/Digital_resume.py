@@ -37,7 +37,7 @@ profile_pic = Image.open(profile_pic)
 
 col1, col2 = st.columns(2, gap="small")
 with col2:
-    st.image(profile_pic, width=215)
+    st.image(profile_pic, width=205)
     if st.button(" Prenez contact avec moi"):#📧
             st.switch_page("pages/Contact_me.py")
 
