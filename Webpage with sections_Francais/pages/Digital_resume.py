@@ -59,11 +59,13 @@ with col2:
 
     st.caption("Orléans, France")
 
+    
     st.markdown(
         "[LinkedIn](https://linkedin.com/in/kaviyarasu-sakthivel)"
         "  |  "
-        "[GitHub](https://github.com/Kaviyarasu135)"
+        "[GitHub](https://github.com/Charles-Lancier/My-Portfolio)"
     )
+
 
     btn_col1, btn_col2 = st.columns(
         [1, 1.5],
