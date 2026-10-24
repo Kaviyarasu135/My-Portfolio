@@ -82,7 +82,6 @@ st.markdown(
 # st.bar_chart(df.set_index('Activités'))
 
 
-
 # ==========================================
 # COMPÉTENCES PERSONNELLES
 # ==========================================
@@ -97,7 +96,12 @@ st.write(
     constante d'apprendre et de progresser.
     """
 )
+
 st.divider()
+
+# ==========================================
+# SAVOIR-ÊTRE ET MÉTHODES DE TRAVAIL
+# ==========================================
 
 st.header("Savoir-être et méthodes de travail", anchor=False)
 
@@ -134,7 +138,10 @@ with col1:
 
 with col2:
 
-    st.subheader("🤝 Collaboration et communication", anchor=False)
+    st.subheader(
+        "🤝 Collaboration et communication",
+        anchor=False
+    )
 
     st.write(
         """
@@ -147,7 +154,10 @@ with col2:
         """
     )
 
-    st.subheader("⚖️ Intégrité et persévérance", anchor=False)
+    st.subheader(
+        "⚖️ Intégrité et persévérance",
+        anchor=False
+    )
 
     st.write(
         """
@@ -164,49 +174,101 @@ with col2:
 st.divider()
 
 # ==========================================
-# LANGUES
+# COMPÉTENCES LINGUISTIQUES
 # ==========================================
-st.markdown(
-    """
-    <div style="line-height: 1.5;">
 
-        <h3 style="margin: 0;">Français</h3>
-        <p style="color: gray; margin: 4px 0;">
-            C1 - Niveau avancé
+st.html("""
+<style>
+.language-block {
+    width: 100%;
+    font-family: inherit;
+}
+
+.language-block h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 18px 0 !important;
+    padding: 0;
+}
+
+.language-item {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.language-item h3 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin: 0 0 4px 0 !important;
+    padding: 0 !important;
+}
+
+.language-level {
+    color: #999;
+    font-size: 0.9rem;
+    margin: 0 0 5px 0 !important;
+    padding: 0 !important;
+}
+
+.language-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.language-divider {
+    display: block;
+    width: 100%;
+    height: 0;
+    border: none;
+    border-top: 1px solid rgba(128,128,128,0.4);
+    margin: 10px 0 !important;
+    padding: 0 !important;
+}
+</style>
+
+<div class="language-block">
+
+    <h2>Compétences linguistiques</h2>
+
+    <div class="language-item">
+        <h3>Français</h3>
+        <p class="language-level">
+            C1 — Niveau avancé
         </p>
-        <p style="margin: 6px 0;">
+        <p class="language-description">
             Communication professionnelle, réunions
             et activités de recherche.
         </p>
+    </div>
 
-        <hr style="margin: 10px 0;
-                   border: none;
-                   border-top: 1px solid #555;">
+    <hr class="language-divider">
 
-        <h3 style="margin: 0;">Anglais</h3>
-        <p style="color: gray; margin: 4px 0;">
-            C2 - Maîtrise
+    <div class="language-item">
+        <h3>Anglais</h3>
+        <p class="language-level">
+            C2 — Maîtrise
         </p>
-        <p style="margin: 6px 0;">
+        <p class="language-description">
             Communication scientifique, rédaction
             académique et échanges internationaux.
         </p>
+    </div>
 
-        <hr style="margin: 10px 0;
-                   border: none;
-                   border-top: 1px solid #555;">
+    <hr class="language-divider">
 
-        <h3 style="margin: 0;">Tamoul</h3>
-        <p style="color: gray; margin: 4px 0;">
+    <div class="language-item">
+        <h3>Tamoul</h3>
+        <p class="language-level">
             Langue maternelle
         </p>
-        <p style="margin: 6px 0;">
+        <p class="language-description">
             Maîtrise native.
         </p>
-
     </div>
-    """,
-    unsafe_allow_html=True
-)
+
+</div>
+""")
 
 
