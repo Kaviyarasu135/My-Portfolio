@@ -12,7 +12,7 @@ st.write(
     Mon parcours académique et professionnel
     m'a conduit de l'ingénierie électrique et electronique
     et de l'automatisation industrielle vers
-    l'analyse de données, la recherche
+    l'analyse de données la recherche
     environnementale et les approches numériques
     appliquées à la construction durable.
 
