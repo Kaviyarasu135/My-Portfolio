@@ -6,13 +6,20 @@ BASE_DIR = Path(__file__).parent
 ASSETS_DIR = BASE_DIR / "Assets"
 
 profile_pic = ASSETS_DIR / "Kaviyarasu_Image.jpeg"
-
 cv_file = ASSETS_DIR / "Francais.pdf"
 
+name_col, empty_col = st.columns(
+    [1.2, 2.8],
+    gap="large"
+)
+
+with name_col:
+    st.title("Kaviyarasu", anchor=False)
+
 col1, col2 = st.columns(
-    [1, 3],
+    [1.2, 2.8],
     gap="large",
-    vertical_alignment="center"
+    vertical_alignment="top"
 )
 
 with col1:
@@ -24,11 +31,6 @@ with col1:
         )
 
 with col2:
-
-    st.title(
-        "Kaviyarasu",
-        anchor=False
-    )
 
     st.subheader(
         "Doctorant-chercheur à l'ESTP",
@@ -72,16 +74,13 @@ st.write(
     """
 )
 
-# ==========================================
-# FORMATION
-# ==========================================
-
 st.header("Formation", anchor=False)
 
 st.markdown("**Doctorat - ESTP**")
 st.caption(
     "Octobre 2026 - Octobre 2029 (prévisionnel)"
 )
+
 st.write(
     "Recherche sur les jumeaux numériques "
     "et le bilan d'approvisionnement "
@@ -91,7 +90,9 @@ st.write(
 st.markdown(
     "**Master en génie industriel - Centrale Nantes**"
 )
+
 st.caption("2024 - 2026 | Nantes, France")
+
 st.write(
     "Ingénierie industrielle, systèmes "
     "intelligents, analyse de données et durabilité."
@@ -99,9 +100,11 @@ st.write(
 
 st.markdown(
     "**Licence en génie électrique et électronique "
-    "— KPR Institute of Engineering**"
+    "- KPR Institute of Engineering**"
 )
+
 st.caption("2020 - 2024 | Inde")
+
 st.write(
     "Systèmes électriques, électronique, "
     "automatisation et ingénierie."
@@ -110,12 +113,13 @@ st.write(
 st.header("Expériences professionnelles", anchor=False)
 
 st.markdown("**Stagiaire de recherche - ESTP**")
+
 st.caption("Mars - Août 2026 | Cachan, France")
 
 st.markdown(
     """
     - Traitement et analyse de données climatiques
-      issues notamment d'EXPLORE2 et TRACC (DRIAS).
+      issues notamment d'EXPLORE2 et TRACC(DRIAS).
     - Développement de scripts Python et
       de tableaux de bord Excel.
     - Analyses statistiques, notamment ACP,
@@ -128,6 +132,7 @@ st.markdown(
 st.markdown(
     "**Stagiaire R&D - KONE Elevators and Escalators**"
 )
+
 st.caption("Juillet 2023 - Mai 2024 | Chennai, Inde")
 
 st.markdown(
@@ -142,6 +147,7 @@ st.markdown(
 )
 
 st.markdown("**Stagiaire en analyse - Sarmangal**")
+
 st.caption("Janvier - Juillet 2023 | Coimbatore, Inde")
 
 st.markdown(
@@ -198,12 +204,14 @@ col1, col2 = st.columns(2, gap="large")
 with col1:
 
     st.markdown("**Programmation et données**")
+
     st.write(
         "Python, Pandas, NumPy, Matplotlib, "
         "Excel et analyse statistique."
     )
 
     st.markdown("**Géomatique**")
+
     st.write(
         "QGIS, données géospatiales, "
         "services WMS, WMTS et WFS."
@@ -212,12 +220,14 @@ with col1:
 with col2:
 
     st.markdown("**Ingénierie industrielle**")
+
     st.write(
         "Automates Beckhoff, systèmes électriques, "
         "automatisation et analyse de production."
     )
 
     st.markdown("**Recherche et environnement**")
+
     st.write(
         "Données climatiques, analyse environnementale, "
         "recherche bibliographique et visualisation."
@@ -247,7 +257,7 @@ if cv_file.exists():
         st.download_button(
             label="Télécharger mon CV",
             data=file.read(),
-            file_name="Francais.pdf",
+            file_name="CV_Kaviyarasu.pdf",
             mime="application/pdf",
             type="primary",
             use_container_width=False
@@ -259,3 +269,5 @@ else:
         "Le CV sera prochainement disponible "
         "au téléchargement."
     )
+
+
