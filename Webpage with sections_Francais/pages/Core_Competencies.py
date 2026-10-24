@@ -50,7 +50,7 @@ st.write(
 st.title("Maîtrise des langues")
 
 languages = ["Français", "Anglais"]
-proficiency = [55, 90]
+proficiency = [75, 90]
 
 for lang, level in zip(languages, proficiency):
     st.write(f"**{lang}**")
