@@ -235,7 +235,7 @@ st.html("""
     <div class="language-item">
         <h3>Français</h3>
         <p class="language-level">
-            C1 — Niveau avancé
+            C1 - Niveau avancé
         </p>
         <p class="language-description">
             Communication professionnelle, réunions
@@ -248,7 +248,7 @@ st.html("""
     <div class="language-item">
         <h3>Anglais</h3>
         <p class="language-level">
-            C2 — Maîtrise
+            C2 - Maîtrise
         </p>
         <p class="language-description">
             Communication scientifique, rédaction
