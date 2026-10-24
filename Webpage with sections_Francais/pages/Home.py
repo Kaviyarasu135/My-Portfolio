@@ -4,7 +4,7 @@ from pathlib import Path
 
 
 BASE_DIR = Path(__file__).parent
-profile_pic = BASE_DIR / "Assets" / "RCL93391.JPG"
+profile_pic = BASE_DIR / "Assets" / "Kaviyarasu_Image.jpeg"
 
 col1, col2 = st.columns(
     [1, 2],
