@@ -1,12 +1,27 @@
 
 import streamlit as st
 from pathlib import Path
+from html import escape
 
 BASE_DIR = Path(__file__).parent
 ASSETS_DIR = BASE_DIR / "Assets"
 
 profile_pic = ASSETS_DIR / "Kaviyarasu_Image.jpeg"
 cv_file = ASSETS_DIR / "Francais.pdf"
+
+def sous_titre(texte):
+    st.markdown(
+        f"""
+        <h4 style="
+            margin-top: 18px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        ">
+            <u>{escape(texte)}</u>
+        </h4>
+        """,
+        unsafe_allow_html=True
+    )
 
 name_col, empty_col = st.columns(
     [1.2, 2.8],
@@ -50,8 +65,42 @@ with col2:
         "[GitHub](https://github.com/Kaviyarasu135)"
     )
 
-    if st.button("Me contacter"):
-        st.switch_page("pages/Contact_me.py")
+    btn_col1, btn_col2 = st.columns(
+        [1, 1.5],
+        gap="small"
+    )
+
+    with btn_col1:
+
+        if st.button(
+            "Me contacter",
+            use_container_width=True
+        ):
+            st.switch_page("pages/Contact_me.py")
+
+    with btn_col2:
+
+        if cv_file.exists():
+
+            with open(cv_file, "rb") as file:
+
+                st.download_button(
+                    label="Télécharger mon CV",
+                    data=file.read(),
+                    file_name="CV_Kaviyarasu.pdf",
+                    mime="application/pdf",
+                    type="primary",
+                    icon=":material/download:",
+                    use_container_width=True
+                )
+
+        else:
+
+            st.button(
+                "CV indisponible",
+                disabled=True,
+                use_container_width=True
+            )
 
 st.divider()
 
@@ -76,7 +125,8 @@ st.write(
 
 st.header("Formation", anchor=False)
 
-st.markdown("**Doctorat - ESTP**")
+sous_titre("Doctorat — ESTP")
+
 st.caption(
     "Octobre 2026 - Octobre 2029 (prévisionnel)"
 )
@@ -87,8 +137,8 @@ st.write(
     "en ressources minérales."
 )
 
-st.markdown(
-    "**Master en génie industriel - Centrale Nantes**"
+sous_titre(
+    "Master en génie industriel - Centrale Nantes"
 )
 
 st.caption("2024 - 2026 | Nantes, France")
@@ -98,9 +148,9 @@ st.write(
     "intelligents, analyse de données et durabilité."
 )
 
-st.markdown(
-    "**Licence en génie électrique et électronique "
-    "- KPR Institute of Engineering**"
+sous_titre(
+    "Licence en génie électrique et électronique "
+    "- KPR Institute of Engineering"
 )
 
 st.caption("2020 - 2024 | Inde")
@@ -112,14 +162,14 @@ st.write(
 
 st.header("Expériences professionnelles", anchor=False)
 
-st.markdown("**Stagiaire de recherche - ESTP**")
+sous_titre("Stagiaire de recherche - ESTP")
 
 st.caption("Mars - Août 2026 | Cachan, France")
 
 st.markdown(
     """
     - Traitement et analyse de données climatiques
-      issues notamment d'EXPLORE2 et TRACC(DRIAS).
+      issues notamment d'EXPLORE2, TRACC et DRIAS.
     - Développement de scripts Python et
       de tableaux de bord Excel.
     - Analyses statistiques, notamment ACP,
@@ -129,8 +179,8 @@ st.markdown(
     """
 )
 
-st.markdown(
-    "**Stagiaire R&D - KONE Elevators and Escalators**"
+sous_titre(
+    "Stagiaire R&D - KONE Elevators and Escalators"
 )
 
 st.caption("Juillet 2023 - Mai 2024 | Chennai, Inde")
@@ -146,7 +196,7 @@ st.markdown(
     """
 )
 
-st.markdown("**Stagiaire en analyse - Sarmangal**")
+sous_titre("Stagiaire en analyse - Sarmangal")
 
 st.caption("Janvier - Juillet 2023 | Coimbatore, Inde")
 
@@ -162,9 +212,9 @@ st.markdown(
 
 st.header("Recherche et projets", anchor=False)
 
-st.markdown(
-    "**BASTIR - Jumeau numérique pour "
-    "l'approvisionnement en ressources minérales**"
+sous_titre(
+    "BASTIR - Jumeau numérique pour "
+    "l'approvisionnement en ressources minérales"
 )
 
 st.caption(
@@ -179,9 +229,9 @@ st.write(
     """
 )
 
-st.markdown(
-    "**Fiabilité des données climatiques "
-    "et matérialité environnementale**"
+sous_titre(
+    "Fiabilité des données climatiques "
+    "et matérialité environnementale"
 )
 
 st.caption("Recherche appliquée | 2026")
@@ -246,28 +296,7 @@ st.markdown(
     """
 )
 
-st.divider()
 
-st.header("Mon CV", anchor=False)
 
-if cv_file.exists():
-
-    with open(cv_file, "rb") as file:
-
-        st.download_button(
-            label="Télécharger mon CV",
-            data=file.read(),
-            file_name="CV_Kaviyarasu.pdf",
-            mime="application/pdf",
-            type="primary",
-            use_container_width=False
-        )
-
-else:
-
-    st.info(
-        "Le CV sera prochainement disponible "
-        "au téléchargement."
-    )
 
 
