@@ -83,4 +83,116 @@ st.bar_chart(df.set_index('Activités'))
 
 
 
+# ==========================================
+# COMPÉTENCES PERSONNELLES
+# ==========================================
+
+st.title("Compétences personnelles", anchor=False)
+
+st.write(
+    """
+    Au-delà des compétences techniques, mon parcours
+    repose sur une approche rigoureuse du travail,
+    une curiosité intellectuelle et une volonté
+    constante d'apprendre et de progresser.
+    """
+)
+
+st.divider()
+
+# ==========================================
+# SAVOIR-ÊTRE
+# ==========================================
+
+st.header("Savoir-être et méthodes de travail", anchor=False)
+
+col1, col2 = st.columns(2, gap="large")
+
+with col1:
+
+    st.subheader("🎯 Rigueur et organisation", anchor=False)
+
+    st.write(
+        """
+        - Adopter une approche méthodique dans
+          l'analyse et la résolution de problèmes.
+        - Organiser les tâches selon les priorités
+          et les objectifs à atteindre.
+        - Accorder une importance particulière
+          à la précision et à la qualité du travail.
+        """
+    )
+
+    st.subheader("🧠 Curiosité et apprentissage", anchor=False)
+
+    st.write(
+        """
+        - Explorer de nouvelles technologies,
+          méthodes et disciplines.
+        - Développer continuellement mes
+          connaissances et compétences.
+        - Relier les connaissances de différents
+          domaines pour aborder les problèmes
+          sous plusieurs perspectives.
+        """
+    )
+
+with col2:
+
+    st.subheader("🤝 Collaboration et communication", anchor=False)
+
+    st.write(
+        """
+        - Échanger des idées et des connaissances
+          dans des équipes pluridisciplinaires.
+        - Communiquer les informations techniques
+          de manière claire et structurée.
+        - Valoriser l'écoute, les retours
+          constructifs et la coopération.
+        """
+    )
+
+    st.subheader("⚖️ Intégrité et persévérance", anchor=False)
+
+    st.write(
+        """
+        - Privilégier l'honnêteté intellectuelle
+          et la transparence.
+        - Maintenir mon engagement face
+          aux difficultés et aux défis.
+        - Considérer les erreurs comme des
+          occasions d'apprentissage et
+          d'amélioration continue.
+        """
+    )
+
+st.divider()
+
+# ==========================================
+# LANGUES
+# ==========================================
+
+st.header("Langues", anchor=False)
+
+st.markdown(
+    """
+    **🇫🇷 Français**
+
+    Utilisation quotidienne et professionnelle,
+    notamment dans les échanges, les réunions
+    et les activités de recherche.
+
+    **🇬🇧 Anglais**
+
+    Communication professionnelle, lecture
+    de publications scientifiques et
+    rédaction technique et académique.
+
+    **🇮🇳 Tamoul**
+
+    Langue maternelle.
+    """
+)
+
+
 
