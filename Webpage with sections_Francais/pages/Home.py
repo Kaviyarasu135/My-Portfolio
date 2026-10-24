@@ -3,35 +3,32 @@ import streamlit as st
 from pathlib import Path
 
 BASE_DIR = Path(__file__).parent
-profile_pic = BASE_DIR / "Assets" / "Kaviyarasu_Image.jpeg"
+profile_pic = BASE_DIR / "Assets" / "RCL93391.JPG"
 
-st.markdown(
-    """
-    <style>
-    [data-testid="stImage"] img {
-        border-radius: 12px;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+st.markdown("""
+<style>
+[data-testid="stImage"] img {
+    border-radius: 12px;
+}
+</style>
+""", unsafe_allow_html=True)
+
+st.title("Kaviyarasu", anchor=False)
 
 col1, col2 = st.columns(
     [1, 2.2],
     gap="large",
-    vertical_alignment="top"
+    vertical_alignment="center"
 )
 
 with col1:
 
-    st.image(str(profile_pic), width=280)
+    st.image(
+        str(profile_pic),
+        width=280
+    )
 
 with col2:
-
-    st.title(
-        "Kaviyarasu",
-        anchor=False
-    )
 
     st.subheader(
         "Doctorant-chercheur à l'ESTP",
@@ -64,7 +61,6 @@ with col2:
     ):
         st.switch_page("pages/Contact_me.py")
 
-
 st.divider()
 
 st.header("Mon profil", anchor=False)
@@ -90,10 +86,7 @@ st.write(
 
 st.header("Domaines d'intérêt", anchor=False)
 
-col1, col2 = st.columns(
-    2,
-    gap="large"
-)
+col1, col2 = st.columns(2, gap="large")
 
 with col1:
 
@@ -107,9 +100,7 @@ with col1:
         """
     )
 
-    st.markdown(
-        "**Géomatique et analyse de données**"
-    )
+    st.markdown("**Géomatique et analyse de données**")
 
     st.write(
         """
