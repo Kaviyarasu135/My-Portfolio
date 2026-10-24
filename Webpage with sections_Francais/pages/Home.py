@@ -2,30 +2,44 @@
 import streamlit as st
 from pathlib import Path
 
-
 BASE_DIR = Path(__file__).parent
 profile_pic = BASE_DIR / "Assets" / "Kaviyarasu_Image.jpeg"
 
+st.markdown(
+    """
+    <style>
+    [data-testid="stImage"] img {
+        border-radius: 12px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 col1, col2 = st.columns(
-    [1, 2],
+    [1, 2.2],
     gap="large",
-    vertical_alignment="center"
+    vertical_alignment="top"
 )
 
 with col1:
-    st.image(str(profile_pic), width=230)
+
+    st.image(str(profile_pic), width=280)
 
 with col2:
 
-    st.title("Kaviyarasu", anchor=False)
+    st.title(
+        "Kaviyarasu",
+        anchor=False
+    )
 
     st.subheader(
         "Doctorant-chercheur à l'ESTP",
         anchor=False
     )
 
-    st.write(
-        "**Génie industriel | Jumeaux numériques | "
+    st.markdown(
+        "**Génie industriel · Jumeaux numériques · "
         "Construction durable**"
     )
 
@@ -37,12 +51,10 @@ with col2:
         de Centrale Nantes, je poursuis actuellement
         un doctorat à l'ESTP.
 
-        Mes travaux de recherche portent sur
-        l'utilisation des jumeaux numériques
-        et des données géospatiales pour
-        l'évaluation des ressources minérales
-        destinées à la construction
-        et à la réhabilitation.
+        Mes recherches portent sur les jumeaux numériques
+        et l'analyse de données géospatiales appliqués
+        à l'évaluation des ressources minérales
+        pour la construction et la réhabilitation.
         """
     )
 
@@ -51,6 +63,7 @@ with col2:
         type="primary"
     ):
         st.switch_page("pages/Contact_me.py")
+
 
 st.divider()
 
@@ -77,37 +90,54 @@ st.write(
 
 st.header("Domaines d'intérêt", anchor=False)
 
-col1, col2 = st.columns(2, gap="large")
+col1, col2 = st.columns(
+    2,
+    gap="large"
+)
 
 with col1:
 
     st.markdown("**Jumeaux numériques**")
+
     st.write(
-        "Exploration des approches numériques "
-        "pour la représentation et l'analyse "
-        "des systèmes physiques."
+        """
+        Exploration des approches numériques
+        pour la représentation et l'analyse
+        des systèmes physiques.
+        """
     )
 
-    st.markdown("**Géomatique et analyse de données**")
+    st.markdown(
+        "**Géomatique et analyse de données**"
+    )
+
     st.write(
-        "Exploitation de données géospatiales "
-        "et environnementales pour l'analyse "
-        "et l'aide à la décision."
+        """
+        Exploitation de données géospatiales
+        et environnementales pour l'analyse
+        et l'aide à la décision.
+        """
     )
 
 with col2:
 
     st.markdown("**Construction durable**")
+
     st.write(
-        "Étude des ressources minérales "
-        "et des matériaux mobilisables "
-        "pour la construction."
+        """
+        Étude des ressources minérales
+        et des matériaux mobilisables
+        pour la construction.
+        """
     )
 
     st.markdown("**Ingénierie industrielle**")
+
     st.write(
-        "Automatisation, analyse des systèmes "
-        "et optimisation des processus."
+        """
+        Automatisation, analyse des systèmes
+        et optimisation des processus.
+        """
     )
 
 st.divider()
