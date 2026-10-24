@@ -6,7 +6,7 @@ st.title("Expériences professionnelles", anchor=False)
 st.write(
     """
     Mes expériences professionnelles m'ont permis
-    d'évoluer dans différents environnements,
+    d'évoluer dans différents environnements
     de l'analyse de production et de l'automatisation
     industrielle à la recherche appliquée et
     à l'analyse de données environnementales.
