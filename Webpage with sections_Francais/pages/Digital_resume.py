@@ -1,158 +1,261 @@
-from pathlib import Path
-import streamlit as st
-from PIL import Image
 
+import streamlit as st
+from pathlib import Path
+
+BASE_DIR = Path(__file__).parent
+ASSETS_DIR = BASE_DIR / "Assets"
+
+profile_pic = ASSETS_DIR / "Kaviyarasu_Image.jpeg"
+
+cv_file = ASSETS_DIR / "Francais.pdf"
+
+col1, col2 = st.columns(
+    [1, 3],
+    gap="large",
+    vertical_alignment="center"
+)
+
+with col1:
+
+    if profile_pic.exists():
+        st.image(
+            str(profile_pic),
+            use_container_width=True
+        )
+
+with col2:
+
+    st.title(
+        "Kaviyarasu",
+        anchor=False
+    )
+
+    st.subheader(
+        "Doctorant-chercheur à l'ESTP",
+        anchor=False
+    )
+
+    st.markdown(
+        "**Génie industriel · Données géospatiales · "
+        "Jumeaux numériques · Construction durable**"
+    )
+
+    st.caption("Orléans, France")
+
+    st.markdown(
+        "[LinkedIn](https://linkedin.com/in/kaviyarasu-sakthivel)"
+        "  |  "
+        "[GitHub](https://github.com/Kaviyarasu135)"
+    )
+
+    if st.button("Me contacter"):
+        st.switch_page("pages/Contact_me.py")
+
+st.divider()
+
+st.header("Profil professionnel", anchor=False)
+
+st.write(
+    """
+    Doctorant-chercheur à l'ESTP et diplômé
+    d'un master en génie industriel de Centrale Nantes.
+
+    Mon parcours associe l'ingénierie électrique,
+    l'automatisation industrielle, l'analyse
+    de données et la recherche environnementale.
+
+    Mes recherches actuelles portent sur
+    les jumeaux numériques et l'intégration
+    de données géospatiales pour l'évaluation
+    des ressources minérales destinées
+    à la construction et à la réhabilitation.
+    """
+)
+
+# ==========================================
+# FORMATION
+# ==========================================
+
+st.header("Formation", anchor=False)
+
+st.markdown("**Doctorat - ESTP**")
+st.caption(
+    "Octobre 2026 - Octobre 2029 (prévisionnel)"
+)
+st.write(
+    "Recherche sur les jumeaux numériques "
+    "et le bilan d'approvisionnement "
+    "en ressources minérales."
+)
+
+st.markdown(
+    "**Master en génie industriel - Centrale Nantes**"
+)
+st.caption("2024 - 2026 | Nantes, France")
+st.write(
+    "Ingénierie industrielle, systèmes "
+    "intelligents, analyse de données et durabilité."
+)
+
+st.markdown(
+    "**Licence en génie électrique et électronique "
+    "— KPR Institute of Engineering**"
+)
+st.caption("2020 - 2024 | Inde")
+st.write(
+    "Systèmes électriques, électronique, "
+    "automatisation et ingénierie."
+)
+
+st.header("Expériences professionnelles", anchor=False)
+
+st.markdown("**Stagiaire de recherche - ESTP**")
+st.caption("Mars - Août 2026 | Cachan, France")
 
 st.markdown(
     """
-    <style>
-    h3 {
-        position: relative;
-    }
-    h3 a {
-        display: none !important;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
+    - Traitement et analyse de données climatiques
+      issues notamment d'EXPLORE2 et TRACC (DRIAS).
+    - Développement de scripts Python et
+      de tableaux de bord Excel.
+    - Analyses statistiques, notamment ACP,
+      et visualisation de données.
+    - Étude de la fiabilité des données dans
+      le contexte de la matérialité environnementale.
+    """
 )
 
-#st.info("For a better experience, please view this application on a computer.")
-# Get the folder this script is in (pages/)
-BASE_DIR = Path(__file__).parent
+st.markdown(
+    "**Stagiaire R&D - KONE Elevators and Escalators**"
+)
+st.caption("Juillet 2023 - Mai 2024 | Chennai, Inde")
 
-# Build absolute paths from the current script location
-resume_file_anglais = BASE_DIR / "Assets" / "Anglais.pdf"
-resume_file_francais = BASE_DIR / "Assets" / "Francais.pdf"
-profile_pic = BASE_DIR / "Assets" / "RCL93391.JPG"
+st.markdown(
+    """
+    - Programmation et configuration
+      d'automates industriels Beckhoff.
+    - Vérification et validation de composants.
+    - Participation au dépannage et
+      à l'analyse de systèmes automatisés.
+    - Analyse de schémas et de processus industriels.
+    """
+)
 
+st.markdown("**Stagiaire en analyse - Sarmangal**")
+st.caption("Janvier - Juillet 2023 | Coimbatore, Inde")
 
-with open(resume_file_anglais, "rb") as pdf_file_anglais:
-    PDFbyte_anglais = pdf_file_anglais.read()
+st.markdown(
+    """
+    - Analyse des processus de production.
+    - Suivi d'indicateurs de qualité et de performance.
+    - Analyse de données industrielles.
+    - Identification de possibilités
+      d'amélioration des processus.
+    """
+)
 
-with open(resume_file_francais, "rb") as pdf_file_francais:
-    PDFbyte_francais = pdf_file_francais.read()
+st.header("Recherche et projets", anchor=False)
 
-profile_pic = Image.open(profile_pic)
+st.markdown(
+    "**BASTIR - Jumeau numérique pour "
+    "l'approvisionnement en ressources minérales**"
+)
 
-col1, col2 = st.columns(2, gap="small")
-with col2:
-    st.image(profile_pic, width=190)
-    if st.button(" Prenez contact avec moi"):#📧
-            st.switch_page("pages/Contact_me.py")
+st.caption(
+    "Recherche doctorale | Depuis octobre 2026"
+)
 
+st.write(
+    """
+    Étude de méthodes numériques et géospatiales
+    pour l'analyse des ressources minérales issues
+    des sols, des terres et des infrastructures.
+    """
+)
 
-# Original text translated into formal French
+st.markdown(
+    "**Fiabilité des données climatiques "
+    "et matérialité environnementale**"
+)
+
+st.caption("Recherche appliquée | 2026")
+
+st.write(
+    """
+    Analyse, traitement et visualisation
+    de données climatiques dans le cadre
+    des évaluations environnementales.
+    """
+)
+
+if st.button("Voir tous mes projets"):
+    st.switch_page("pages/Projects.py")
+
+st.header("Compétences techniques", anchor=False)
+
+col1, col2 = st.columns(2, gap="large")
 
 with col1:
-    st.title("Kaviyarasu", anchor=False)
-    st.write("Ingénieur & Passionné de Développement durable")
-    st.write("Kaviyarasu.Sakthivel@eleves.ec-nantes.fr | 0780831482 | Nantes, France")
-    st.write("[LinkedIn](https://linkedin.com/in/kaviyarasu-sakthivel) | kaviyarasu.streamlit.app")
-    st.write("\n")
-  
-    st.download_button(
-        label="Télécharger le CV ",
-        data=PDFbyte_francais,
-        file_name=resume_file_francais.name,
-        mime="application/octet-stream",
+
+    st.markdown("**Programmation et données**")
+    st.write(
+        "Python, Pandas, NumPy, Matplotlib, "
+        "Excel et analyse statistique."
     )
 
-st.markdown("<h3><u>Expérience et qualifications</u></h3>", unsafe_allow_html=True)
-st.write(
-    """
-- Ingénieur industriel spécialisé dans l’optimisation des processus de production pour améliorer les performances et la rentabilité.
-- Passionné par la durabilité, intégrant des facteurs économiques, sociaux et environnementaux dans les opérations industrielles.
-- Solide expérience pratique en programmation de PLC avec des automates Beckhoff.
-- Analytique et adaptable, axé sur l’amélioration continue dans la fabrication et la modélisation industrielle.
-    """
+    st.markdown("**Géomatique**")
+    st.write(
+        "QGIS, données géospatiales, "
+        "services WMS, WMTS et WFS."
+    )
+
+with col2:
+
+    st.markdown("**Ingénierie industrielle**")
+    st.write(
+        "Automates Beckhoff, systèmes électriques, "
+        "automatisation et analyse de production."
+    )
+
+    st.markdown("**Recherche et environnement**")
+    st.write(
+        "Données climatiques, analyse environnementale, "
+        "recherche bibliographique et visualisation."
+    )
+
+st.header(
+    "Compétences linguistiques",
+    anchor=False
 )
-st.markdown("<h3><u>Formation</u></h3>", unsafe_allow_html=True)
-st.write(
+
+st.markdown(
     """
-- Master en ingénierie industrielle| École Centrale de Nantes (2024 - 2026)
-- Licence en ingénierie électrique et électronique | KPR Institute of Engineering (2020 - 2024)
-    """
-)
-st.markdown("<h3><u>Historique professionnel</u></h3>", unsafe_allow_html=True)
-st.write("**Stagiaire R&D | Kone Elevators and Escalators**")
-st.write("(07/2023 - 05/2024 | Chennai, Inde)")
-st.write(
-    """
-- Développé des programmes PLC à l’aide d’automates Beckhoff, configuré des modules d’entrée/sortie et effectué le dépannage des systèmes.
-- Appliqué des principes de durabilité pour optimiser les processus et soutenir les initiatives de réduction des déchets.
-- Contribué à la planification des ressources, identifié les goulots d’étranglement et proposé des améliorations de l’efficacité.
-    """
-)
-st.write("**Stagiaire en analyse de la qualité | Sarmangal**")
-st.write("(01/2023 - 07/2023 | Coimbatore, Inde)")
-st.write(
-    """
-- Évalué les processus de production à travers une perspective de durabilité, mettant l’accent sur l’efficacité des ressources et les pratiques de fabrication éthiques.
-- Identifié les inefficacités et recommandé des améliorations pour améliorer la qualité et réduire le gaspillage de matériaux.
-- Créé et interprété des diagrammes de flux de processus et des graphiques de contrôle de la qualité pour optimiser la production.
-    """
-)
-st.markdown("<h3><u>Compétences techniques</u></h3>", unsafe_allow_html=True)
-st.write(
-    """
-- Programmation : Python (Pandas, NumPy, Matplotlib, etc.), programmation de PLC (Beckhoff).
-- Analyse et visualisation de données : Excel, Python (Streamlit, etc.).
-- Systèmes industriels : durabilité, gestion de la production, gestion de projets.
-- Fabrication : optimisation des processus, contrôle de la qualité.
-    """
-)
-st.markdown("<h3><u>Projets</u></h3>", unsafe_allow_html=True)
-st.write(
-    """
-- Chargement dynamique des véhicules électriques
-- Automatisation de la mesure de puissance à l’aide de PLC
-- Analyse stratégique et durabilité d’une entreprise
-    """
-)
-st.markdown("<h3><u>Langues</u></h3>", unsafe_allow_html=True)
-st.write(
-    """
-- **Anglais** (C2 – Septembre 2025)
-- **Français** (B2 – Septembre 2025)
-    """
-)
-#- **Tamoul** (Langue maternelle)
-st.markdown("<h3><u>Temps consacré dans une journée</u></h3>", unsafe_allow_html=True)
-st.write(
-    """
-- Lecture de littérature professionnelle
-- Apprentissage interdisciplinaire
-- Amélioration de la maîtrise du français
-- Lecture de science-fiction
-- Developpment personnel
-- Moments de pause
-- Perfectionnement en programmation Python
-- Recherche d’un jeu vidéo à explorer
-- Renforcement de la pensée logique et des capacités de résolution de problèmes
-    """
-)
-st.markdown("<h3><u>Valeurs fondamentales</u></h3>", unsafe_allow_html=True)
-st.write(
-    """
-- **Honnêteté** – Intégrité avant la commodité dans chaque décision.
-- **Engagement** – Rester concentré sur la croissance à long terme.
-- **Discipline** – Une approche structurée du travail et de l’apprentissage.
-- **Constance** – De petites actions persistantes mènent à de grands résultats.
+    - **Français :** C1 - Avancé
+    - **Anglais :** C2 - Avancé
+    - **Tamoul :** Langue maternelle
     """
 )
 
-st.markdown("<h3><u>Objectif de vie</u></h3>", unsafe_allow_html=True)
-st.write(
-    """
-"La véritable croissance ne vient pas seulement de s’améliorer soi-même, mais aussi d’élever les autres au fur et à mesure de son progrès."
-    """
+st.divider()
 
-)
+st.header("Mon CV", anchor=False)
 
+if cv_file.exists():
 
+    with open(cv_file, "rb") as file:
 
+        st.download_button(
+            label="Télécharger mon CV",
+            data=file.read(),
+            file_name="Francais.pdf",
+            mime="application/pdf",
+            type="primary",
+            use_container_width=False
+        )
 
+else:
 
-
-
+    st.info(
+        "Le CV sera prochainement disponible "
+        "au téléchargement."
+    )
