@@ -97,12 +97,7 @@ st.write(
     constante d'apprendre et de progresser.
     """
 )
-
 st.divider()
-
-# ==========================================
-# SAVOIR-ÊTRE
-# ==========================================
 
 st.header("Savoir-être et méthodes de travail", anchor=False)
 
