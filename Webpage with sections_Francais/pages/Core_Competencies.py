@@ -167,27 +167,18 @@ st.divider()
 # LANGUES
 # ==========================================
 
-st.header("Langues", anchor=False)
+st.header("Compétences linguistiques", anchor=False)
 
 st.markdown(
     """
-    **🇫🇷 Français**
-
-    Utilisation quotidienne et professionnelle,
-    notamment dans les échanges, les réunions
-    et les activités de recherche.
-
-    **🇬🇧 Anglais**
-
-    Communication professionnelle, lecture
-    de publications scientifiques et
-    rédaction technique et académique.
-
-    **🇮🇳 Tamoul**
-
-    Langue maternelle.
+    | Langue | Niveau | Utilisation |
+    |:---|:---|:---|
+    | **Français** | C1 — Avancé | Communication professionnelle, réunions et recherche |
+    | **Anglais** | C2 — Maîtrise | Communication scientifique et rédaction académique |
+    | **Tamoul** | Langue maternelle | Maîtrise native |
     """
 )
+
 
 
 
