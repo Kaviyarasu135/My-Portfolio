@@ -169,15 +169,27 @@ st.divider()
 
 st.header("Compétences linguistiques", anchor=False)
 
-st.markdown(
-    """
-    | Langue | Niveau | Utilisation |
-    |:---|:---|:---|
-    | **Français** | C1 — Avancé | Communication professionnelle, réunions et recherche |
-    | **Anglais** | C2 — Maîtrise | Communication scientifique et rédaction académique |
-    | **Tamoul** | Langue maternelle | Maîtrise native |
-    """
+st.markdown("#### Français")
+st.caption("C1 - Niveau avancé")
+st.write(
+    "Communication professionnelle, réunions "
+    "et activités de recherche."
 )
+
+st.divider()
+
+st.markdown("#### Anglais")
+st.caption("C2 - Maîtrise")
+st.write(
+    "Communication scientifique, rédaction académique "
+    "et échanges internationaux."
+)
+
+st.divider()
+
+st.markdown("#### Tamoul")
+st.caption("Langue maternelle")
+st.write("Maîtrise native.")
 
 
 
