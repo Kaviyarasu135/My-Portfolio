@@ -166,31 +166,47 @@ st.divider()
 # ==========================================
 # LANGUES
 # ==========================================
+st.markdown(
+    """
+    <div style="line-height: 1.5;">
 
-st.header("Compétences linguistiques", anchor=False)
+        <h3 style="margin: 0;">Français</h3>
+        <p style="color: gray; margin: 4px 0;">
+            C1 - Niveau avancé
+        </p>
+        <p style="margin: 6px 0;">
+            Communication professionnelle, réunions
+            et activités de recherche.
+        </p>
 
-st.markdown("#### Français")
-st.caption("C1 - Niveau avancé")
-st.write(
-    "Communication professionnelle, réunions "
-    "et activités de recherche."
+        <hr style="margin: 10px 0;
+                   border: none;
+                   border-top: 1px solid #555;">
+
+        <h3 style="margin: 0;">Anglais</h3>
+        <p style="color: gray; margin: 4px 0;">
+            C2 - Maîtrise
+        </p>
+        <p style="margin: 6px 0;">
+            Communication scientifique, rédaction
+            académique et échanges internationaux.
+        </p>
+
+        <hr style="margin: 10px 0;
+                   border: none;
+                   border-top: 1px solid #555;">
+
+        <h3 style="margin: 0;">Tamoul</h3>
+        <p style="color: gray; margin: 4px 0;">
+            Langue maternelle
+        </p>
+        <p style="margin: 6px 0;">
+            Maîtrise native.
+        </p>
+
+    </div>
+    """,
+    unsafe_allow_html=True
 )
-
-st.divider()
-
-st.markdown("#### Anglais")
-st.caption("C2 - Maîtrise")
-st.write(
-    "Communication scientifique, rédaction académique "
-    "et échanges internationaux."
-)
-
-st.divider()
-
-st.markdown("#### Tamoul")
-st.caption("Langue maternelle")
-st.write("Maîtrise native.")
-
-
 
 
