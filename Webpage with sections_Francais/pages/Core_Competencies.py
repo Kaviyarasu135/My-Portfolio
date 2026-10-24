@@ -15,71 +15,71 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.title("Valeurs fondamentales", anchor=False)
+# st.title("Valeurs fondamentales", anchor=False)
 
-st.write("**1) Honnêteté :**")
-st.write(
-    """
-    - Valoriser la vérité avant le confort, rechercher des retours authentiques.
-    - Privilégier des relations honnêtes, même lorsque cela est difficile à entendre.
-    """
-)
-st.write("**2) Engagement :**")
-st.write(
-    """
-    - S’investir pleinement dans ses objectifs, surmonter les défis avec détermination.
-    - Rester concentré et déterminé dans la poursuite de ses ambitions.
-    """
-)
-st.write("**3) Discipline :**")
-st.write(
-    """
-    - Croire en un effort constant et en la constance pour atteindre le succès.
-    - Adhérer à des routines, faire confiance au processus même dans les moments difficiles.
-    """
-)
-st.write("**4) Constance :**")
-st.write(
-    """
-    - Se focaliser sur le progrès à long terme plutôt que sur des résultats rapides.
-    - Atteindre ses objectifs grâce à des améliorations quotidiennes constantes.
-    """
-)
+# st.write("**1) Honnêteté :**")
+# st.write(
+#     """
+#     - Valoriser la vérité avant le confort, rechercher des retours authentiques.
+#     - Privilégier des relations honnêtes, même lorsque cela est difficile à entendre.
+#     """
+# )
+# st.write("**2) Engagement :**")
+# st.write(
+#     """
+#     - S’investir pleinement dans ses objectifs, surmonter les défis avec détermination.
+#     - Rester concentré et déterminé dans la poursuite de ses ambitions.
+#     """
+# )
+# st.write("**3) Discipline :**")
+# st.write(
+#     """
+#     - Croire en un effort constant et en la constance pour atteindre le succès.
+#     - Adhérer à des routines, faire confiance au processus même dans les moments difficiles.
+#     """
+# )
+# st.write("**4) Constance :**")
+# st.write(
+#     """
+#     - Se focaliser sur le progrès à long terme plutôt que sur des résultats rapides.
+#     - Atteindre ses objectifs grâce à des améliorations quotidiennes constantes.
+#     """
+# )
 
 
-st.title("Maîtrise des langues")
+# st.title("Maîtrise des langues")
 
-languages = ["Français", "Anglais"]
-proficiency = [75, 90]
+# languages = ["Français", "Anglais"]
+# proficiency = [75, 90]
 
-for lang, level in zip(languages, proficiency):
-    st.write(f"**{lang}**")
-    st.progress(level / 100)
+# for lang, level in zip(languages, proficiency):
+#     st.write(f"**{lang}**")
+#     st.progress(level / 100)
 
-st.title("Temps consacré dans ma journée", anchor=False)
+# st.title("Temps consacré dans ma journée", anchor=False)
 
-activities = [
-    "Lecture de littérature professionnelle",
-    "Apprentissage interdisciplinaire",
-    "Lecture de science-fiction",
-    "Amélioration de la maîtrise du français",
-    "Moments de pause",
-    "Développement personnel",
-    "Perfectionnement en programmation Python",
-    "Cyclisme",
-    "Recherche d’un jeu vidéo à explorer"
-]
+# activities = [
+#     "Lecture de littérature professionnelle",
+#     "Apprentissage interdisciplinaire",
+#     "Lecture de science-fiction",
+#     "Amélioration de la maîtrise du français",
+#     "Moments de pause",
+#     "Développement personnel",
+#     "Perfectionnement en programmation Python",
+#     "Cyclisme",
+#     "Recherche d’un jeu vidéo à explorer"
+# ]
 
-time_spent = [2.4, 2.4, 2.4, 3.8, 1.68, 3.12, 2.4, 2.4, 2.4]
+# time_spent = [2.4, 2.4, 2.4, 3.8, 1.68, 3.12, 2.4, 2.4, 2.4]
 
-# Create a DataFrame for Streamlit's bar chart
-df = pd.DataFrame({
-    'Activités': activities,
-    'Temps consacré ': time_spent
-})
+# # Create a DataFrame for Streamlit's bar chart
+# df = pd.DataFrame({
+#     'Activités': activities,
+#     'Temps consacré ': time_spent
+# })
 
-# Display the bar chart using Streamlit's built-in function
-st.bar_chart(df.set_index('Activités'))
+# # Display the bar chart using Streamlit's built-in function
+# st.bar_chart(df.set_index('Activités'))
 
 
 
