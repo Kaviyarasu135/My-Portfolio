@@ -1,79 +1,53 @@
-import streamlit as st
 from pathlib import Path
-from PIL import Image
-# Original text translated into formal French
+import streamlit as st
 
-st.markdown(
-    """
-    <style>
-    .custom-message {
-        color: white;
-        background-color: #4CAF50;
-        padding: 10px;
-        border-radius: 5px;
-        text-align: center;
-        font-size: 16px;
-    }
-    </style>
-    <div class="custom-message">
-        Pour une meilleure expérience, veuillez consulter cette application sur un ordinateur.
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
-#st.info("For a better experience, please view this application on a computer.")
-# Get the folder this script is in (pages/)
-BASE_DIR = Path(__file__).parent
+BASE = Path(__file__).parent
+st.markdown("""
+<style>
+.block-container {max-width: 1120px; padding-top: 2.2rem;}
+h1, h2, h3 {letter-spacing: -.025em;}
+[data-testid="stSidebar"] {border-right: 1px solid rgba(120,120,120,.17);}
+</style>
+""", unsafe_allow_html=True)
 
-profile_pic = BASE_DIR / "Assets" / "RCL93391.JPG"
-
-profile_pic = Image.open(profile_pic)
-
-with st.container():
-    left_column, right_column = st.columns(2)
-    with left_column:
-        st.image(profile_pic, width=215)
-    with right_column:
-        st.title("Kaviyarasu", anchor=False)
-        st.write("Ingénieur industriel")
-        if st.button("📧 Prenez contact avec moi"):
+portrait, intro = st.columns([1, 2], gap="large", vertical_alignment="center")
+with portrait:
+    st.image(str(BASE / "Assets" / "RCL93391.JPG"), use_container_width=True)
+with intro:
+    st.caption("PORTFOLIO · RECHERCHE & INGÉNIERIE")
+    st.title("Kaviyarasu Sakthivel")
+    st.subheader("Doctorant-chercheur à l’ESTP")
+    st.write("Génie industriel · Jumeaux numériques · Données géospatiales · Construction durable")
+    st.caption("📍 Orléans, France")
+    st.write(
+        "Je suis doctorant-chercheur à l’ESTP, diplômé d’un master en génie industriel "
+        "de Centrale Nantes. Mes travaux portent sur l’étude des ressources minérales "
+        "pour la construction et la réhabilitation, en mobilisant les données géospatiales "
+        "et les approches de jumeau numérique."
+    )
+    c1, c2 = st.columns(2)
+    with c1:
+        if st.button("Découvrir mes recherches", use_container_width=True, type="primary"):
+            st.switch_page("pages/Projects.py")
+    with c2:
+        if st.button("Me contacter", use_container_width=True):
             st.switch_page("pages/Contact_me.py")
 
+st.divider()
+st.header("Mes domaines d’intérêt")
+a, b, c = st.columns(3)
+with a:
+    st.markdown("#### 🌍 Ressources & environnement")
+    st.write("Données environnementales, fiabilité de l’information et utilisation raisonnée des ressources.")
+with b:
+    st.markdown("#### 🗺️ Géomatique & données")
+    st.write("QGIS, traitement de données spatiales et analyse des territoires.")
+with c:
+    st.markdown("#### 🏗️ Jumeaux numériques")
+    st.write("Méthodes numériques appliquées à l’étude du cadre bâti et des matériaux de construction.")
 
-st.subheader("Qui suis-je ?", anchor=False)
-st.write(
-            """
-            - Ingénieur industriel visant à optimiser l’efficacité de la production.
-            - Débutant dans la création de diagrammes de modèles industriels.
-            - Passionné par la durabilité et l'IA.
-            - Développeur Python émergent.
-            """
-        )
-st.subheader("Un ingénieur industriel en France", anchor=False)
-st.write(
-    "J’aide les entreprises à optimiser leurs processus de production en utilisant des modèles et diagrammes d’entreprise, tout en privilégiant la durabilité. En combinant des analyses basées sur les données avec l’automatisation, je rends les flux de travail plus efficaces tout en garantissant leur durabilité à long terme. J’utilise également Python pour développer des solutions qui simplifient les tâches et favorisent une prise de décision éclairée."
-)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+st.divider()
+st.header("En ce moment")
+st.info("**2026–2029 · ESTP** — Thèse en cours : projet BASTIR, consacré à l’approvisionnement en ressources minérales issues des sols, des terres et des infrastructures.")
+st.write("**2026 · ESTP** — Stage de recherche achevé sur la fiabilité des données climatiques et leur utilisation dans les analyses de matérialité.")
+st.caption("Ce site présente des travaux réalisés et des recherches en cours ; les objectifs de thèse ne sont pas présentés comme des résultats acquis.")
