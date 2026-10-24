@@ -21,7 +21,7 @@ st.header(
     anchor=False
 )
 st.caption(
-    "Recherche doctorale | ESTP | Octobre 2026 – En cours"
+    "Recherche doctorale | ESTP | Octobre 2026 - En cours"
 )
 st.markdown("**Présentation du projet**")
 st.write(
@@ -85,7 +85,7 @@ st.header(
     anchor=False
 )
 st.caption(
-    "Stage de recherche | ESTP, Cachan | Mars – Août 2026"
+    "Stage de recherche | ESTP, Cachan | Mars - Août 2026"
 )
 st.markdown("**Présentation du projet**")
 st.write(
