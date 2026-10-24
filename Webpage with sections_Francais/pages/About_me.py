@@ -1,59 +1,189 @@
+
 import streamlit as st
 
-st.markdown(
+st.title("À propos de moi", anchor=False)
+
+st.write(
     """
-    <style>
-    h3 {
-        position: relative;
-    }
-    h3 a {
-        display: none !important;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
+    Je suis doctorant-chercheur à l'ESTP à Orléans
+    et diplômé d'un master en génie industriel
+    de Centrale Nantes.
+
+    Mon parcours académique et professionnel
+    m'a conduit de l'ingénierie électrique et electronique
+    et de l'automatisation industrielle vers
+    l'analyse de données, la recherche
+    environnementale et les approches numériques
+    appliquées à la construction durable.
+
+    Mes travaux actuels s'intéressent à
+    l'utilisation des jumeaux numériques et
+    des données géospatiales pour mieux
+    comprendre et évaluer les ressources
+    minérales destinées à la construction
+    et à la réhabilitation.
+    """
 )
- 
 
-# Original text translated into formal French
-st.header("À propos de moi", anchor=False)
-st.markdown("<h3><u>Mes Activités :</u></h3>", unsafe_allow_html=True)
+st.divider()
+
+st.header("Parcours académique", anchor=False)
+
+st.subheader(
+    "Doctorat - ESTP",
+    anchor=False
+)
+
+st.caption(
+    "Depuis octobre 2026 | Orléans, France"
+)
+
 st.write(
-            """
-            Je suis un ingénieur industriel spécialisé dans l’optimisation durable des entreprises grâce à l’utilisation de logiciels avancés, y compris Python. Je me concentre sur l’analyse basée sur les données, l’optimisation des processus et la modélisation des flux d’entreprise pour améliorer l’efficacité et faciliter une transition harmonieuse vers la durabilité.
-            - Optimisation des flux de production et d’entreprise.
-            - Création de visualisations claires pour améliorer les opérations commerciales.
-            - Accompagnement des entreprises vers des pratiques écologiques et résilientes.
-            - Utilisation de la technologie pour améliorer les performances opérationnelles.
-            - Développement et entraînement de modèles pour une prise de décision plus intelligente à l’aide de Python.
-            """
-        )
+    """
+    Je poursuis actuellement un doctorat
+    consacré au développement d'une approche
+    de jumeau numérique pour le bilan
+    d'approvisionnement en ressources minérales
+    issues des sols, des terres et des
+    infrastructures pour la construction
+    et la réhabilitation.
 
-st.markdown("<h3><u>Master en Ingénierie Industrielle| École Centrale de Nantes (2024 - 2026) :</u></h3>", unsafe_allow_html=True)
+    Cette recherche mobilise des connaissances
+    en ingénierie, en gestion des ressources,
+    en systèmes d'information géographique
+    et en intégration de données.
+
+    Elle vise à explorer des méthodes
+    permettant de mieux caractériser les
+    ressources disponibles et de contribuer
+    à une gestion plus durable des matériaux
+    de construction.
+    """
+)
+st.subheader(
+    "Master en génie industriel - Centrale Nantes",
+    anchor=False
+)
+
+st.caption(
+    "2024 - 2026 | Nantes, France"
+)
+
 st.write(
-            """
-            Je suis étudiant en Master d’ingénierie industrielle, spécialisé dans les entreprises intelligentes et connectées. Je me concentre sur l’optimisation des opérations commerciales en intégrant des systèmes intelligents, garantissant efficacité, durabilité et innovation. Je travaille avec aisance aussi bien de manière autonome qu’en équipe, dirigeant des équipes et des projets avec une approche orientée vers les résultats.
-            - Alignement des technologies avec les besoins commerciaux pour une croissance durable.
-            - Amélioration des opérations grâce à des systèmes intelligents basés sur les données.
-            - Compétence à travailler de manière autonome et en équipe.
-            - Direction d’équipes pour atteindre efficacement les objectifs industriels.
-            - Application d’une pensée analytique pour améliorer les performances des entreprises.
-            """
-        )
+    """
+    J'ai obtenu mon master en génie industriel
+    à Centrale Nantes où j'ai approfondi
+    mes connaissances en systèmes industriels,
+    analyse de données, optimisation des
+    processus et durabilité.
 
-st.markdown("<h3><u>Licence en Ingénierie Électrique et Électronique | KPR Institute of Engineering (2020 - 2024) :</u></h3>", unsafe_allow_html=True)
+    Cette formation m'a permis de développer
+    une approche transversale des problématiques
+    d'ingénierie, en reliant les dimensions
+    techniques, organisationnelles
+    et environnementales.
+
+    Mon stage de fin d'études à l'ESTP 
+    consacré à la fiabilité des données
+    climatiques a renforcé mon intérêt
+    pour la recherche appliquée.
+    """
+)
+
+st.subheader(
+    "Licence en génie électrique et électronique",
+    anchor=False
+)
+
+st.caption(
+    "KPR Institute of Engineering | "
+    "2020 - 2024 | Inde"
+)
+
 st.write(
-            """
-            Je suis titulaire d’une licence en ingénierie électrique et électronique, avec une solide expertise dans la conception, l’analyse et l’optimisation des systèmes électriques. J’aime relever des défis techniques complexes, que ce soit en travaillant seul ou en équipe. Doté d’un esprit stratégique et d’une expérience en leadership, je veille à ce que les projets soient menés efficacement tout en favorisant l’innovation dans les systèmes électriques et électroniques.
-            - Expertise dans la conception, l’optimisation et l’amélioration des performances des circuits.
-            - Expérience dans la direction d’équipes pour obtenir des résultats à fort impact.
-            - Approche analytique rigoureuse pour diagnostiquer et améliorer l’efficacité des systèmes.
-            - Orientation vers la connexion entre la technologie et les applications électriques du monde réel.
-            """
+    """
+    Ma formation initiale en génie électrique
+    et électronique m'a apporté des bases
+    techniques en systèmes électriques,
+    électronique, automatisation et
+    analyse de systèmes.
 
-        )
+    Elle m'a également permis de développer
+    une compréhension des systèmes industriels
+    et de leurs applications pratiques,
+    notamment dans le domaine
+    de l'automatisation.
+    """
+)
 
+st.divider()
 
+st.header(
+    "Centres d'intérêt scientifiques",
+    anchor=False
+)
 
+col1, col2 = st.columns(2, gap="large")
+
+with col1:
+
+    st.markdown("**Jumeaux numériques**")
+    st.write(
+        "Exploration des approches numériques "
+        "pour représenter, analyser et "
+        "mieux comprendre les systèmes physiques."
+    )
+
+    st.markdown("**Données et géomatique**")
+    st.write(
+        "Traitement et analyse de données, "
+        "systèmes d'information géographique "
+        "et représentation spatiale."
+    )
+
+with col2:
+
+    st.markdown("**Construction durable**")
+    st.write(
+        "Gestion des ressources minérales, "
+        "matériaux de construction et "
+        "valorisation des ressources existantes."
+    )
+
+    st.markdown("**Ingénierie et environnement**")
+    st.write(
+        "Analyse environnementale, "
+        "fiabilité des données et "
+        "développement de méthodes "
+        "d'aide à la décision."
+    )
+
+st.divider()
+
+st.header("Mon approche", anchor=False)
+
+st.write(
+    """
+    J'aborde les problématiques d'ingénierie
+    et de recherche avec une démarche
+    analytique, structurée et ouverte
+    à différentes disciplines.
+
+    Je m'intéresse particulièrement
+    aux situations dans lesquelles
+    les outils numériques et l'exploitation
+    de données peuvent contribuer
+    à mieux comprendre des systèmes complexes.
+
+    Mon objectif est de développer
+    progressivement des compétences
+    complémentaires en recherche,
+    en ingénierie et en sciences des données,
+    tout en conservant une attention
+    particulière à leurs applications
+    concrètes et à leurs implications
+    environnementales.
+    """
+)
 
 
