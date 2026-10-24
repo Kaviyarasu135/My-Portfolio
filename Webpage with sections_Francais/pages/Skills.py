@@ -1,12 +1,5 @@
-
 import streamlit as st
-
-# ==========================================
-# COMPÉTENCES TECHNIQUES
-# ==========================================
-
 st.title("Compétences techniques", anchor=False)
-
 st.write(
     """
     Mon parcours en génie industriel et en recherche
@@ -19,22 +12,13 @@ st.write(
     les approches de jumeaux numériques.
     """
 )
-
 st.divider()
-
-# ==========================================
-# COMPÉTENCES PRINCIPALES
-# ==========================================
-
 col1, col2 = st.columns(2, gap="large")
-
 with col1:
-
     st.subheader(
         "Programmation et analyse de données",
         anchor=False
     )
-
     st.markdown(
         """
         - **Python :** traitement, structuration
@@ -50,12 +34,10 @@ with col1:
           principales (ACP).
         """
     )
-
     st.subheader(
         "Géomatique et SIG",
         anchor=False
     )
-
     st.markdown(
         """
         - **QGIS :** visualisation, manipulation
@@ -69,19 +51,16 @@ with col1:
           premières opérations spatiales.
         """
     )
-
 with col2:
-
     st.subheader(
         "Analyse environnementale et recherche",
         anchor=False
     )
-
     st.markdown(
         """
         - **Données climatiques :** traitement
           et analyse de données issues notamment
-          d'EXPLORE2, TRACC et DRIAS.
+          d'EXPLORE2 et TRACC(DRIAS).
         - **Fiabilité des données :** contrôle,
           comparaison et interprétation
           de données environnementales.
@@ -91,12 +70,10 @@ with col2:
           bibliographique et synthèse documentaire.
         """
     )
-
     st.subheader(
         "Automatisation et ingénierie industrielle",
         anchor=False
     )
-
     st.markdown(
         """
         - **Automates programmables :**
@@ -110,18 +87,11 @@ with col2:
           et identification des inefficacités.
         """
     )
-
-# ==========================================
-# OUTILS SCIENTIFIQUES ET NUMÉRIQUES
-# ==========================================
-
 st.divider()
-
 st.subheader(
     "Outils scientifiques et numériques",
     anchor=False
 )
-
 st.markdown(
     """
     - **Streamlit :** développement d'applications
@@ -132,16 +102,10 @@ st.markdown(
       de documents scientifiques.
     """
 )
-
-# ==========================================
-# DOMAINES EN COURS D'APPROFONDISSEMENT
-# ==========================================
-
 st.subheader(
     "Domaines en cours d'approfondissement",
     anchor=False
 )
-
 st.markdown(
     """
     - Jumeaux numériques appliqués
@@ -152,3 +116,5 @@ st.markdown(
       hétérogènes pour la recherche.
     """
 )
+
+
