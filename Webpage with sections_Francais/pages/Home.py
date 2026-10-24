@@ -1,79 +1,140 @@
+
 import streamlit as st
 from pathlib import Path
-from PIL import Image
-# Original text translated into formal French
 
-st.markdown(
-    """
-    <style>
-    .custom-message {
-        color: white;
-        background-color: #4CAF50;
-        padding: 10px;
-        border-radius: 5px;
-        text-align: center;
-        font-size: 16px;
-    }
-    </style>
-    <div class="custom-message">
-        Pour une meilleure expérience, veuillez consulter cette application sur un ordinateur.
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
-#st.info("For a better experience, please view this application on a computer.")
-# Get the folder this script is in (pages/)
+
 BASE_DIR = Path(__file__).parent
-
 profile_pic = BASE_DIR / "Assets" / "RCL93391.JPG"
 
-profile_pic = Image.open(profile_pic)
-
-with st.container():
-    left_column, right_column = st.columns(2)
-    with left_column:
-        st.image(profile_pic, width=215)
-    with right_column:
-        st.title("Kaviyarasu", anchor=False)
-        st.write("Ingénieur industriel")
-        if st.button("📧 Prenez contact avec moi"):
-            st.switch_page("pages/Contact_me.py")
-
-
-st.subheader("Qui suis-je ?", anchor=False)
-st.write(
-            """
-            - Ingénieur industriel visant à optimiser l’efficacité de la production.
-            - Débutant dans la création de diagrammes de modèles industriels.
-            - Passionné par la durabilité et l'IA.
-            - Développeur Python émergent.
-            """
-        )
-st.subheader("Un ingénieur industriel en France", anchor=False)
-st.write(
-    "J’aide les entreprises à optimiser leurs processus de production en utilisant des modèles et diagrammes d’entreprise, tout en privilégiant la durabilité. En combinant des analyses basées sur les données avec l’automatisation, je rends les flux de travail plus efficaces tout en garantissant leur durabilité à long terme. J’utilise également Python pour développer des solutions qui simplifient les tâches et favorisent une prise de décision éclairée."
+col1, col2 = st.columns(
+    [1, 2],
+    gap="large",
+    vertical_alignment="center"
 )
 
+with col1:
+    st.image(str(profile_pic), width=230)
 
+with col2:
 
+    st.title("Kaviyarasu", anchor=False)
 
+    st.subheader(
+        "Doctorant-chercheur à l'ESTP",
+        anchor=False
+    )
 
+    st.write(
+        "**Génie industriel | Jumeaux numériques | "
+        "Construction durable**"
+    )
 
+    st.caption("Orléans, France")
 
+    st.write(
+        """
+        Diplômé d'un master en génie industriel
+        de Centrale Nantes, je poursuis actuellement
+        un doctorat à l'ESTP.
 
+        Mes travaux de recherche portent sur
+        l'utilisation des jumeaux numériques
+        et des données géospatiales pour
+        l'évaluation des ressources minérales
+        destinées à la construction
+        et à la réhabilitation.
+        """
+    )
 
+    if st.button(
+        "Me contacter",
+        type="primary"
+    ):
+        st.switch_page("pages/Contact_me.py")
 
+st.divider()
 
+st.header("Mon profil", anchor=False)
 
+st.write(
+    """
+    Mon parcours associe l'ingénierie électrique,
+    le génie industriel et la recherche appliquée.
 
+    Après des expériences en automatisation
+    industrielle et en analyse de production,
+    je me suis orienté vers l'analyse de données
+    environnementales et les méthodes numériques
+    appliquées aux problématiques de durabilité.
 
+    Cette évolution me permet d'aborder
+    les problématiques de recherche
+    avec une perspective interdisciplinaire,
+    reliant ingénierie, données
+    et environnement.
+    """
+)
 
+st.header("Domaines d'intérêt", anchor=False)
 
+col1, col2 = st.columns(2, gap="large")
 
+with col1:
 
+    st.markdown("**Jumeaux numériques**")
+    st.write(
+        "Exploration des approches numériques "
+        "pour la représentation et l'analyse "
+        "des systèmes physiques."
+    )
 
+    st.markdown("**Géomatique et analyse de données**")
+    st.write(
+        "Exploitation de données géospatiales "
+        "et environnementales pour l'analyse "
+        "et l'aide à la décision."
+    )
 
+with col2:
 
+    st.markdown("**Construction durable**")
+    st.write(
+        "Étude des ressources minérales "
+        "et des matériaux mobilisables "
+        "pour la construction."
+    )
 
+    st.markdown("**Ingénierie industrielle**")
+    st.write(
+        "Automatisation, analyse des systèmes "
+        "et optimisation des processus."
+    )
+
+st.divider()
+
+st.header("Recherche actuelle", anchor=False)
+
+st.markdown(
+    "**BASTIR - Jumeau numérique pour le bilan "
+    "d'approvisionnement en ressources minérales**"
+)
+
+st.write(
+    """
+    Mes travaux doctoraux à l'ESTP visent
+    à étudier l'intégration de données
+    territoriales, géologiques et relatives
+    aux infrastructures dans une approche
+    de jumeau numérique.
+
+    Cette recherche s'inscrit dans
+    les enjeux de gestion durable des
+    ressources pour la construction
+    et la réhabilitation.
+    """
+)
+
+if st.button("Découvrir mes projets"):
+    st.switch_page("pages/Projects.py")
 
 
