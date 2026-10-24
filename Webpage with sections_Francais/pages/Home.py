@@ -3,7 +3,7 @@ import streamlit as st
 from pathlib import Path
 
 BASE_DIR = Path(__file__).parent
-profile_pic = BASE_DIR / "Assets" / "RCL93391.JPG"
+profile_pic = BASE_DIR / "Assets" / "Kaviyarasu_Image.jpeg"
 
 st.markdown("""
 <style>
